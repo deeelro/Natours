@@ -5,7 +5,7 @@ const bookTour = async (tourId) => {
     try {
         // 1) Get checkout session from API
         const session = await axios.get(
-            `http://localhost:3000/api/v1/bookings/checkout-session/${tourId}`,
+            `/api/v1/bookings/checkout-session/${tourId}`,
             { withCredentials: true } // Asegura que las cookies se envíen
         );
         // 2) Create checkout form + charge the credit card
